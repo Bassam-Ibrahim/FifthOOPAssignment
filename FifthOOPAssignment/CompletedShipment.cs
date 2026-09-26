@@ -25,5 +25,14 @@ namespace FifthOOPAssignment
             Console.WriteLine($"Description   : {Description}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
         }
+        public override string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Completed.";
+        }
+
+        public override decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.03m; // m4 faker kanet kam %
+        }
     }
 }
